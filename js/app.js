@@ -634,40 +634,44 @@ class App {
     const listGrid = document.getElementById('collectionsListGrid');
     if (!listGrid) return;
 
-    listGrid.innerHTML = items.map(card => {
+    listGrid.innerHTML = items.map((card, idx) => {
       const iconClass = this.getCollectionIcon(card.category);
       const safeCategory = (card.category || '').replace(/'/g, "\\'");
-      return `
-        <div class="list-pattern-card" onclick="window.app.openAlbumAsPDF('${safeCategory}')">
-          <div class="list-card-left">
-            <div class="list-card-icon-bubble">
-              <i class="${iconClass}"></i>
-            </div>
-            ${card.coverImg ? `
-              <div class="list-card-thumb">
-                <img src="${card.coverImg}" alt="${card.category}" loading="lazy">
-              </div>
-            ` : ''}
-            <div class="list-card-info">
-              <h3 class="list-card-title">${card.category}</h3>
-              <div class="list-card-meta">
-                <span class="list-meta-pill count-pill">
-                  <i class="fa-solid fa-layer-group"></i> ${card.count} ${card.count === 1 ? 'Photo' : 'Photos'}
-                </span>
-                <span class="list-meta-pill status-pill">
-                  <i class="fa-solid fa-circle-check"></i> PDF Ready
-                </span>
-              </div>
-            </div>
-          </div>
+      const collectionNum = (this.allCollectionCardsData.findIndex(c => c.category === card.category) + 1) || (idx + 1);
 
-          <div class="list-card-actions" onclick="event.stopPropagation()">
-            <button class="list-btn list-btn-open" onclick="window.app.openAlbumAsPDF('${safeCategory}')" title="Read in Full-Screen PDF Viewer">
-              <i class="fa-solid fa-file-pdf"></i> <span>Open PDF</span>
-            </button>
-            <button class="list-btn list-btn-download" onclick="window.app.quickDownloadAlbum('${safeCategory}', event)" title="Direct Download PDF">
-              <i class="fa-solid fa-download"></i>
-            </button>
+      return `
+        <div class="list-grid-card" onclick="window.app.openAlbumAsPDF('${safeCategory}')">
+          <div class="fan-card-full-image bronze-grain-gradient">
+            <div class="fan-card-glow-bg"></div>
+            
+            <!-- Top Tag & Icon -->
+            <div class="fan-card-top-row">
+              <span class="fan-card-pill-tag">Collection #${collectionNum}</span>
+              <div class="fan-card-icon-bubble">
+                <i class="${iconClass}"></i>
+              </div>
+            </div>
+
+            <!-- Prominent Card Name on Background -->
+            <div class="fan-card-center-body">
+              <h3 class="fan-card-title-text">${card.category}</h3>
+              <p class="fan-card-subtitle-text">Curated formula & diagram notes</p>
+            </div>
+
+            <!-- Bottom Action Row -->
+            <div class="fan-card-bottom-row">
+              <span class="fan-card-photo-count">
+                <i class="fa-solid fa-layer-group"></i> ${card.count} ${card.count === 1 ? 'Photo' : 'Photos'}
+              </span>
+              <div class="list-card-btn-group" onclick="event.stopPropagation()">
+                <button class="fan-card-action-btn" onclick="window.app.openAlbumAsPDF('${safeCategory}')">
+                  <i class="fa-solid fa-file-pdf"></i> Open PDF
+                </button>
+                <button class="fan-card-download-btn" onclick="window.app.quickDownloadAlbum('${safeCategory}', event)" title="Direct Download ${safeCategory}.pdf">
+                  <i class="fa-solid fa-download"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       `;
