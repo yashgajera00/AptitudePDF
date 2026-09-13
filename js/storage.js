@@ -50,8 +50,23 @@ class StorageManager {
       const res = await fetch('/api/collections', { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        if (data && data.success && Array.isArray(data.collections)) {
+        if (data && data.success && Array.isArray(data.collections) && data.collections.length > 0) {
           return data.collections;
+        }
+      }
+    } catch (e) {
+      // Fallback to static metadata.json
+    }
+
+    try {
+      const metaRes = await fetch('/uploads/metadata.json', { cache: 'no-store' });
+      if (metaRes.ok) {
+        const meta = await metaRes.json();
+        if (meta && meta.collections) {
+          const colList = Array.isArray(meta.collections) ? meta.collections : Object.values(meta.collections);
+          if (colList.length > 0) {
+            return colList;
+          }
         }
       }
     } catch (e) {
@@ -165,8 +180,20 @@ class StorageManager {
       const res = await fetch('/api/data', { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        if (data && data.success && Array.isArray(data.images)) {
+        if (data && data.success && Array.isArray(data.images) && data.images.length > 0) {
           return data.images;
+        }
+      }
+    } catch (e) {
+      // Fallback to static metadata.json
+    }
+
+    try {
+      const metaRes = await fetch('/uploads/metadata.json', { cache: 'no-store' });
+      if (metaRes.ok) {
+        const meta = await metaRes.json();
+        if (meta && Array.isArray(meta.images) && meta.images.length > 0) {
+          return meta.images;
         }
       }
     } catch (e) {
