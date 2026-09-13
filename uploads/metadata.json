@@ -14,9 +14,336 @@
       "id": "col-7100869839134868445",
       "name": "Percentage",
       "createdAt": 1789321709854
+    },
+    "Ages": {
+      "id": "col-5239781403063082364",
+      "name": "Ages",
+      "createdAt": 1789323407682
+    },
+    "Average": {
+      "id": "col-2529873168174643899",
+      "name": "Average",
+      "createdAt": 1789323521294
+    },
+    "Compound Interest": {
+      "id": "col-4401008604987816416",
+      "name": "Compound Interest",
+      "createdAt": 1789324275156
+    },
+    "Partnership": {
+      "id": "col-6118834258779705860",
+      "name": "Partnership",
+      "createdAt": 1789323803655
+    },
+    "Profit & Loss": {
+      "id": "col-961065980672516554",
+      "name": "Profit & Loss",
+      "createdAt": 1789323903502
+    },
+    "Ratio & Proportion": {
+      "id": "col-1182855933383339492",
+      "name": "Ratio & Proportion",
+      "createdAt": 1789324078877
     }
   },
   "images": [
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.14 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.14 Pm",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.14 PM.jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.14%20PM.jpeg",
+      "createdAt": 1789323416970,
+      "orderIndex": 1
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.15 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.15 Pm",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.15 PM.jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.15%20PM.jpeg",
+      "createdAt": 1789323416974,
+      "orderIndex": 2
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.15 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.15 Pm (1)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.15 PM (1).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.15%20PM%20%281%29.jpeg",
+      "createdAt": 1789323416976,
+      "orderIndex": 3
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.15 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.15 Pm (2)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.15 PM (2).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.15%20PM%20%282%29.jpeg",
+      "createdAt": 1789323416979,
+      "orderIndex": 4
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.16 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.16 Pm",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.16 PM.jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.16%20PM.jpeg",
+      "createdAt": 1789323416982,
+      "orderIndex": 5
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.16 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.16 Pm (1)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.16 PM (1).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.16%20PM%20%281%29.jpeg",
+      "createdAt": 1789323416985,
+      "orderIndex": 6
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.16 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.16 Pm (2)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.16 PM (2).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.16%20PM%20%282%29.jpeg",
+      "createdAt": 1789323416989,
+      "orderIndex": 7
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.17 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.17 Pm",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.17 PM.jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.17%20PM.jpeg",
+      "createdAt": 1789323416992,
+      "orderIndex": 8
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.17 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.17 Pm (1)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.17 PM (1).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.17%20PM%20%281%29.jpeg",
+      "createdAt": 1789323416995,
+      "orderIndex": 9
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.17 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.17 Pm (2)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.17 PM (2).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.17%20PM%20%282%29.jpeg",
+      "createdAt": 1789323416999,
+      "orderIndex": 10
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.18 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.18 Pm",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.18 PM.jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.18%20PM.jpeg",
+      "createdAt": 1789323417003,
+      "orderIndex": 11
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.18 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.18 Pm (1)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.18 PM (1).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.18%20PM%20%281%29.jpeg",
+      "createdAt": 1789323417007,
+      "orderIndex": 12
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.18 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.18 Pm (2)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.18 PM (2).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.18%20PM%20%282%29.jpeg",
+      "createdAt": 1789323417010,
+      "orderIndex": 13
+    },
+    {
+      "id": "Ages-WhatsApp Image 2026-09-13 at 11.46.18 PM (3).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.46.18 Pm (3)",
+      "category": "Ages",
+      "filename": "WhatsApp Image 2026-09-13 at 11.46.18 PM (3).jpeg",
+      "dataUrl": "/uploads/Ages/WhatsApp%20Image%202026-09-13%20at%2011.46.18%20PM%20%283%29.jpeg",
+      "createdAt": 1789323417014,
+      "orderIndex": 14
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.25 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.25 Pm",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.25 PM.jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.25%20PM.jpeg",
+      "createdAt": 1789323532986,
+      "orderIndex": 1
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.25 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.25 Pm (1)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.25 PM (1).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.25%20PM%20%281%29.jpeg",
+      "createdAt": 1789323532994,
+      "orderIndex": 2
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.25 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.25 Pm (2)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.25 PM (2).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.25%20PM%20%282%29.jpeg",
+      "createdAt": 1789323532997,
+      "orderIndex": 3
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM.jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM.jpeg",
+      "createdAt": 1789323533001,
+      "orderIndex": 4
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (1)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (1).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%281%29.jpeg",
+      "createdAt": 1789323533005,
+      "orderIndex": 5
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (2)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (2).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%282%29.jpeg",
+      "createdAt": 1789323533008,
+      "orderIndex": 6
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (3).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (3)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (3).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%283%29.jpeg",
+      "createdAt": 1789323533013,
+      "orderIndex": 7
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (4).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (4)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (4).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%284%29.jpeg",
+      "createdAt": 1789323533016,
+      "orderIndex": 8
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (5).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (5)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (5).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%285%29.jpeg",
+      "createdAt": 1789323533019,
+      "orderIndex": 9
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (6).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (6)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (6).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%286%29.jpeg",
+      "createdAt": 1789323533021,
+      "orderIndex": 10
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (7).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (7)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (7).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%287%29.jpeg",
+      "createdAt": 1789323533024,
+      "orderIndex": 11
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (8).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (8)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (8).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%288%29.jpeg",
+      "createdAt": 1789323533027,
+      "orderIndex": 12
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (9).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (9)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (9).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%289%29.jpeg",
+      "createdAt": 1789323533029,
+      "orderIndex": 13
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (10).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (10)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (10).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%2810%29.jpeg",
+      "createdAt": 1789323533033,
+      "orderIndex": 14
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (11).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (11)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (11).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%2811%29.jpeg",
+      "createdAt": 1789323533036,
+      "orderIndex": 15
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (12).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (12)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (12).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%2812%29.jpeg",
+      "createdAt": 1789323533038,
+      "orderIndex": 16
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (13).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (13)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (13).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%2813%29.jpeg",
+      "createdAt": 1789323533041,
+      "orderIndex": 17
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (14).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (14)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (14).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%2814%29.jpeg",
+      "createdAt": 1789323533043,
+      "orderIndex": 18
+    },
+    {
+      "id": "Average-WhatsApp Image 2026-09-13 at 11.48.27 PM (15).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.48.27 Pm (15)",
+      "category": "Average",
+      "filename": "WhatsApp Image 2026-09-13 at 11.48.27 PM (15).jpeg",
+      "dataUrl": "/uploads/Average/WhatsApp%20Image%202026-09-13%20at%2011.48.27%20PM%20%2815%29.jpeg",
+      "createdAt": 1789323533046,
+      "orderIndex": 19
+    },
     {
       "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.13.57 PM.jpeg",
       "title": "Whatsapp Image 2026 09 13 At 3.13.57 Pm",
@@ -79,6 +406,321 @@
       "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.14.01%20PM%20%281%29.jpeg",
       "createdAt": 1789296900606,
       "orderIndex": 7
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.51 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.51 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.51 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.51%20AM.jpeg",
+      "createdAt": 1789324290930,
+      "orderIndex": 1
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.51 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.51 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.51 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.51%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290934,
+      "orderIndex": 2
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.51 AM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.51 Am (2)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.51 AM (2).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.51%20AM%20%282%29.jpeg",
+      "createdAt": 1789324290939,
+      "orderIndex": 3
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.52 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.52 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.52 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.52%20AM.jpeg",
+      "createdAt": 1789324290943,
+      "orderIndex": 4
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.52 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.52 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.52 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.52%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290947,
+      "orderIndex": 5
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.52 AM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.52 Am (2)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.52 AM (2).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.52%20AM%20%282%29.jpeg",
+      "createdAt": 1789324290949,
+      "orderIndex": 6
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.53 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.53 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.53 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.53%20AM.jpeg",
+      "createdAt": 1789324290953,
+      "orderIndex": 7
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.53 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.53 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.53 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.53%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290956,
+      "orderIndex": 8
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.53 AM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.53 Am (2)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.53 AM (2).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.53%20AM%20%282%29.jpeg",
+      "createdAt": 1789324290959,
+      "orderIndex": 9
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.54 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.54 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.54 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.54%20AM.jpeg",
+      "createdAt": 1789324290962,
+      "orderIndex": 10
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.54 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.54 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.54 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.54%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290965,
+      "orderIndex": 11
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.54 AM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.54 Am (2)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.54 AM (2).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.54%20AM%20%282%29.jpeg",
+      "createdAt": 1789324290969,
+      "orderIndex": 12
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.55 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.55 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.55 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.55%20AM.jpeg",
+      "createdAt": 1789324290971,
+      "orderIndex": 13
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.56 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.56 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.56 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.56%20AM.jpeg",
+      "createdAt": 1789324290974,
+      "orderIndex": 14
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.56 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.56 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.56 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.56%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290977,
+      "orderIndex": 15
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.57 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.57 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.57 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.57%20AM.jpeg",
+      "createdAt": 1789324290979,
+      "orderIndex": 16
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.57 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.57 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.57 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.57%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290982,
+      "orderIndex": 17
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.57 AM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.57 Am (2)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.57 AM (2).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.57%20AM%20%282%29.jpeg",
+      "createdAt": 1789324290985,
+      "orderIndex": 18
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.58 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.58 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.58 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.58%20AM.jpeg",
+      "createdAt": 1789324290987,
+      "orderIndex": 19
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.58 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.58 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.58 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.58%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290990,
+      "orderIndex": 20
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.58 AM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.58 Am (2)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.58 AM (2).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.58%20AM%20%282%29.jpeg",
+      "createdAt": 1789324290993,
+      "orderIndex": 21
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.59 AM.jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.59 Am",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.59 AM.jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.59%20AM.jpeg",
+      "createdAt": 1789324290995,
+      "orderIndex": 22
+    },
+    {
+      "id": "Compound Interest-WhatsApp Image 2026-09-14 at 12.00.59 AM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 14 At 12.00.59 Am (1)",
+      "category": "Compound Interest",
+      "filename": "WhatsApp Image 2026-09-14 at 12.00.59 AM (1).jpeg",
+      "dataUrl": "/uploads/Compound%20Interest/WhatsApp%20Image%202026-09-14%20at%2012.00.59%20AM%20%281%29.jpeg",
+      "createdAt": 1789324290999,
+      "orderIndex": 23
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.01 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.01 Pm",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.01 PM.jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.01%20PM.jpeg",
+      "createdAt": 1789323816127,
+      "orderIndex": 1
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.02 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.02 Pm",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.02 PM.jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.02%20PM.jpeg",
+      "createdAt": 1789323816131,
+      "orderIndex": 2
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.02 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.02 Pm (1)",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.02 PM (1).jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.02%20PM%20%281%29.jpeg",
+      "createdAt": 1789323816132,
+      "orderIndex": 3
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.03 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.03 Pm",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.03 PM.jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.03%20PM.jpeg",
+      "createdAt": 1789323816137,
+      "orderIndex": 4
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.03 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.03 Pm (1)",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.03 PM (1).jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.03%20PM%20%281%29.jpeg",
+      "createdAt": 1789323816141,
+      "orderIndex": 5
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.03 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.03 Pm (2)",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.03 PM (2).jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.03%20PM%20%282%29.jpeg",
+      "createdAt": 1789323816145,
+      "orderIndex": 6
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.04 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.04 Pm",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.04 PM.jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.04%20PM.jpeg",
+      "createdAt": 1789323816147,
+      "orderIndex": 7
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.04 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.04 Pm (1)",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.04 PM (1).jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.04%20PM%20%281%29.jpeg",
+      "createdAt": 1789323816154,
+      "orderIndex": 8
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.04 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.04 Pm (2)",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.04 PM (2).jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.04%20PM%20%282%29.jpeg",
+      "createdAt": 1789323816156,
+      "orderIndex": 9
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.05 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.05 Pm",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.05 PM.jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.05%20PM.jpeg",
+      "createdAt": 1789323816159,
+      "orderIndex": 10
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.05 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.05 Pm (1)",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.05 PM (1).jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.05%20PM%20%281%29.jpeg",
+      "createdAt": 1789323816163,
+      "orderIndex": 11
+    },
+    {
+      "id": "Partnership-WhatsApp Image 2026-09-13 at 11.53.05 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.53.05 Pm (2)",
+      "category": "Partnership",
+      "filename": "WhatsApp Image 2026-09-13 at 11.53.05 PM (2).jpeg",
+      "dataUrl": "/uploads/Partnership/WhatsApp%20Image%202026-09-13%20at%2011.53.05%20PM%20%282%29.jpeg",
+      "createdAt": 1789323816166,
+      "orderIndex": 12
     },
     {
       "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.03 PM.jpeg",
@@ -232,6 +874,402 @@
       "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.19%20PM%20%281%29.jpeg",
       "createdAt": 1789296900715,
       "orderIndex": 17
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.24 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.24 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.24 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.24%20PM.jpeg",
+      "createdAt": 1789323918753,
+      "orderIndex": 1
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.25 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.25 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.25 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.25%20PM.jpeg",
+      "createdAt": 1789323918756,
+      "orderIndex": 2
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.25 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.25 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.25 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.25%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918759,
+      "orderIndex": 3
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.25 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.25 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.25 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.25%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918763,
+      "orderIndex": 4
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.26 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.26 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.26 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.26%20PM.jpeg",
+      "createdAt": 1789323918766,
+      "orderIndex": 5
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.26 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.26 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.26 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.26%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918769,
+      "orderIndex": 6
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.26 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.26 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.26 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.26%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918772,
+      "orderIndex": 7
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.27 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.27 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.27 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.27%20PM.jpeg",
+      "createdAt": 1789323918775,
+      "orderIndex": 8
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.27 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.27 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.27 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.27%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918778,
+      "orderIndex": 9
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.27 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.27 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.27 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.27%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918782,
+      "orderIndex": 10
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.27 PM (3).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.27 Pm (3)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.27 PM (3).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.27%20PM%20%283%29.jpeg",
+      "createdAt": 1789323918785,
+      "orderIndex": 11
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.28 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.28 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.28 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.28%20PM.jpeg",
+      "createdAt": 1789323918788,
+      "orderIndex": 12
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.28 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.28 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.28 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.28%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918790,
+      "orderIndex": 13
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.28 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.28 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.28 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.28%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918793,
+      "orderIndex": 14
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.29 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.29 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.29 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.29%20PM.jpeg",
+      "createdAt": 1789323918795,
+      "orderIndex": 15
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.29 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.29 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.29 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.29%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918798,
+      "orderIndex": 16
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.29 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.29 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.29 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.29%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918801,
+      "orderIndex": 17
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.30 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.30 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.30 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.30%20PM.jpeg",
+      "createdAt": 1789323918804,
+      "orderIndex": 18
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.30 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.30 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.30 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.30%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918807,
+      "orderIndex": 19
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.30 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.30 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.30 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.30%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918809,
+      "orderIndex": 20
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.31 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.31 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.31 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.31%20PM.jpeg",
+      "createdAt": 1789323918812,
+      "orderIndex": 21
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.31 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.31 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.31 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.31%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918814,
+      "orderIndex": 22
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.31 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.31 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.31 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.31%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918818,
+      "orderIndex": 23
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.32 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.32 Pm",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.32 PM.jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.32%20PM.jpeg",
+      "createdAt": 1789323918820,
+      "orderIndex": 24
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.32 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.32 Pm (1)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.32 PM (1).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.32%20PM%20%281%29.jpeg",
+      "createdAt": 1789323918823,
+      "orderIndex": 25
+    },
+    {
+      "id": "Profit & Loss-WhatsApp Image 2026-09-13 at 11.54.32 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.54.32 Pm (2)",
+      "category": "Profit & Loss",
+      "filename": "WhatsApp Image 2026-09-13 at 11.54.32 PM (2).jpeg",
+      "dataUrl": "/uploads/Profit%20%26%20Loss/WhatsApp%20Image%202026-09-13%20at%2011.54.32%20PM%20%282%29.jpeg",
+      "createdAt": 1789323918825,
+      "orderIndex": 26
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.10 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.10 Pm",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.10 PM.jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.10%20PM.jpeg",
+      "createdAt": 1789324089523,
+      "orderIndex": 1
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.10 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.10 Pm (1)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.10 PM (1).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.10%20PM%20%281%29.jpeg",
+      "createdAt": 1789324089527,
+      "orderIndex": 2
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.10 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.10 Pm (2)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.10 PM (2).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.10%20PM%20%282%29.jpeg",
+      "createdAt": 1789324089530,
+      "orderIndex": 3
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.11 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.11 Pm",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.11 PM.jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.11%20PM.jpeg",
+      "createdAt": 1789324089534,
+      "orderIndex": 4
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.11 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.11 Pm (1)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.11 PM (1).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.11%20PM%20%281%29.jpeg",
+      "createdAt": 1789324089538,
+      "orderIndex": 5
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.11 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.11 Pm (2)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.11 PM (2).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.11%20PM%20%282%29.jpeg",
+      "createdAt": 1789324089542,
+      "orderIndex": 6
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.12 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.12 Pm",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.12 PM.jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.12%20PM.jpeg",
+      "createdAt": 1789324089546,
+      "orderIndex": 7
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.12 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.12 Pm (1)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.12 PM (1).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.12%20PM%20%281%29.jpeg",
+      "createdAt": 1789324089548,
+      "orderIndex": 8
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.12 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.12 Pm (2)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.12 PM (2).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.12%20PM%20%282%29.jpeg",
+      "createdAt": 1789324089550,
+      "orderIndex": 9
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.13 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.13 Pm",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.13 PM.jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.13%20PM.jpeg",
+      "createdAt": 1789324089554,
+      "orderIndex": 10
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.13 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.13 Pm (1)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.13 PM (1).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.13%20PM%20%281%29.jpeg",
+      "createdAt": 1789324089557,
+      "orderIndex": 11
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.13 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.13 Pm (2)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.13 PM (2).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.13%20PM%20%282%29.jpeg",
+      "createdAt": 1789324089560,
+      "orderIndex": 12
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.14 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.14 Pm",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.14 PM.jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.14%20PM.jpeg",
+      "createdAt": 1789324089563,
+      "orderIndex": 13
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.14 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.14 Pm (1)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.14 PM (1).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.14%20PM%20%281%29.jpeg",
+      "createdAt": 1789324089567,
+      "orderIndex": 14
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.14 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.14 Pm (2)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.14 PM (2).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.14%20PM%20%282%29.jpeg",
+      "createdAt": 1789324089569,
+      "orderIndex": 15
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.15 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.15 Pm",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.15 PM.jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.15%20PM.jpeg",
+      "createdAt": 1789324089572,
+      "orderIndex": 16
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.15 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.15 Pm (1)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.15 PM (1).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.15%20PM%20%281%29.jpeg",
+      "createdAt": 1789324089575,
+      "orderIndex": 17
+    },
+    {
+      "id": "Ratio & Proportion-WhatsApp Image 2026-09-13 at 11.57.15 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 11.57.15 Pm (2)",
+      "category": "Ratio & Proportion",
+      "filename": "WhatsApp Image 2026-09-13 at 11.57.15 PM (2).jpeg",
+      "dataUrl": "/uploads/Ratio%20%26%20Proportion/WhatsApp%20Image%202026-09-13%20at%2011.57.15%20PM%20%282%29.jpeg",
+      "createdAt": 1789324089577,
+      "orderIndex": 18
     },
     {
       "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.21 PM.jpeg",

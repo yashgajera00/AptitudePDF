@@ -39,6 +39,7 @@ class CardFanCarousel {
   }
 
   getResponsiveMultiplier(width) {
+    if (width < 380) return 0.23;
     if (width < 480) return 0.28;
     if (width < 640) return 0.38;
     if (width < 768) return 0.52;
@@ -48,34 +49,52 @@ class CardFanCarousel {
 
   getHeightMultiplier(width) {
     let idealPx = 38 * 16;
-    if (width < 480) idealPx = 22 * 16;
-    else if (width < 640) idealPx = 26 * 16;
+    if (width < 480) idealPx = 20 * 16;
+    else if (width < 640) idealPx = 24 * 16;
     else if (width < 768) idealPx = 28 * 16;
     else if (width < 1024) idealPx = 34 * 16;
 
-    const available = window.innerHeight * 0.7;
+    const available = window.innerHeight * 0.65;
     if (available >= idealPx) return 1;
-    return available / idealPx;
+    return Math.max(0.65, available / idealPx);
+  }
+
+  getMaxVisible() {
+    const w = window.innerWidth;
+    if (w < 480) return 3;
+    if (w < 768) return 5;
+    return this.options.maxVisible || 7;
   }
 
   getSlotConfig(totalCards, slot) {
+    const isMobile = window.innerWidth < 640;
+    const rotScale = isMobile ? 0.55 : 1.0;
+
     if (totalCards <= 1) {
       return { rot: 0, scale: 1.0, x: 0, y: 0.0, zIndex: 10 };
     }
     if (totalCards === 2) {
       return slot === 0
-        ? { rot: -8, scale: 0.96, x: -11, y: 1.2, zIndex: 5 }
-        : { rot: 8, scale: 0.96, x: 11, y: 1.2, zIndex: 5 };
+        ? { rot: -8 * rotScale, scale: 0.96, x: -11, y: 1.2, zIndex: 5 }
+        : { rot: 8 * rotScale, scale: 0.96, x: 11, y: 1.2, zIndex: 5 };
     }
-    if (totalCards >= this.options.maxVisible) return this.fanPositions[slot];
+    if (totalCards === 3) {
+      if (slot === 0) return { rot: -12 * rotScale, scale: 0.88, x: -20, y: 2.2, zIndex: 4 };
+      if (slot === 1) return { rot: 0, scale: 1.0, x: 0, y: 0.0, zIndex: 10 };
+      if (slot === 2) return { rot: 12 * rotScale, scale: 0.88, x: 20, y: 2.2, zIndex: 4 };
+    }
+    if (totalCards >= 7) {
+      const p = this.fanPositions[slot] || { rot: 0, scale: 1.0, x: 0, y: 0.0, zIndex: 10 };
+      return { ...p, rot: p.rot * rotScale };
+    }
     const center = (totalCards - 1) / 2;
     const distance = center > 0 ? (slot - center) / center : 0;
     const absDistance = Math.abs(distance);
     return {
-      rot: distance * 21,
-      scale: 1.0 - 0.2244 * absDistance * absDistance,
-      x: distance * 28,
-      y: absDistance * absDistance * 7.3,
+      rot: distance * 18 * rotScale,
+      scale: 1.0 - 0.18 * absDistance * absDistance,
+      x: distance * 26,
+      y: absDistance * absDistance * 5.5,
       zIndex: 10 - Math.round(absDistance * 5),
     };
   }
@@ -97,7 +116,8 @@ class CardFanCarousel {
     const total = this.cards.length;
     if (total === 0) return map;
 
-    const visibleSlots = Math.min(this.options.maxVisible, total);
+    const maxVis = this.getMaxVisible();
+    const visibleSlots = Math.min(maxVis, total);
     const halfSlots = Math.floor(visibleSlots / 2);
 
     for (let slot = 0; slot < visibleSlots; slot++) {
@@ -226,7 +246,8 @@ class CardFanCarousel {
     const isFirstMount = !this.hasEntered;
     const multiplier = this.getResponsiveMultiplier(window.innerWidth);
     const hMult = this.getHeightMultiplier(window.innerWidth);
-    const slotCount = Math.min(this.options.maxVisible, totalCards);
+    const maxVis = this.getMaxVisible();
+    const slotCount = Math.min(maxVis, totalCards);
     const config = (slot) => this.getSlotConfig(slotCount, slot);
 
     let completedCount = 0;
@@ -277,7 +298,8 @@ class CardFanCarousel {
   attachCardInteractions() {
     const cardElements = Array.from(this.container.querySelectorAll('.fan-card'));
     const totalCards = this.cards.length;
-    const slotCount = Math.min(this.options.maxVisible, totalCards);
+    const maxVis = this.getMaxVisible();
+    const slotCount = Math.min(maxVis, totalCards);
     const config = (slot) => this.getSlotConfig(slotCount, slot);
 
     const updateHoverLayout = (hoveredSlot) => {
@@ -337,6 +359,7 @@ class CardFanCarousel {
 
     cardElements.forEach((el, i) => {
       el.addEventListener('mouseenter', () => {
+        if (!window.matchMedia('(hover: hover)').matches) return;
         const visibleMap = this.getVisibleMap(this.centerIndex);
         const slot = visibleMap.get(i);
         if (slot !== undefined) {
@@ -362,6 +385,8 @@ class CardFanCarousel {
       this.updateLayout();
     });
 
+    this.attachTouchSwipe();
+
     // Arrow button listeners
     const prevBtn = document.getElementById('fanPrevBtn');
     const nextBtn = document.getElementById('fanNextBtn');
@@ -381,6 +406,44 @@ class CardFanCarousel {
         this.cycle('right');
       };
     }
+  }
+
+  attachTouchSwipe() {
+    if (!this.container) return;
+
+    let startX = 0;
+    let startY = 0;
+    let distX = 0;
+    let distY = 0;
+    let startTime = 0;
+
+    this.container.addEventListener('touchstart', (e) => {
+      if (!e.touches.length) return;
+      const touch = e.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+      distX = 0;
+      distY = 0;
+      startTime = Date.now();
+    }, { passive: true });
+
+    this.container.addEventListener('touchmove', (e) => {
+      if (!e.touches.length) return;
+      const touch = e.touches[0];
+      distX = touch.clientX - startX;
+      distY = touch.clientY - startY;
+    }, { passive: true });
+
+    this.container.addEventListener('touchend', () => {
+      const elapsedTime = Date.now() - startTime;
+      if (Math.abs(distX) >= 35 && Math.abs(distX) > Math.abs(distY) * 1.15 && elapsedTime < 650) {
+        if (distX < 0) {
+          this.cycle('right'); // Swipe left -> Next card
+        } else {
+          this.cycle('left');  // Swipe right -> Prev card
+        }
+      }
+    }, { passive: true });
   }
 
   handleCardClick(index) {

@@ -74,9 +74,11 @@
 html, body {
   width: 100%;
   height: 100%;
+  height: 100dvh;
   overflow: hidden; /* No scrollable on home page */
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -270,20 +272,30 @@ body {
 
 @media (max-width: 640px) {
   .corner-brand-wrapper {
-    top: 14px;
+    top: calc(12px + env(safe-area-inset-top, 0px));
     left: 14px;
   }
   .corner-actions-wrapper {
-    top: 14px;
+    top: calc(12px + env(safe-area-inset-top, 0px));
     right: 14px;
     gap: 8px;
   }
-  .corner-brand-text {
-    display: none;
+  .corner-brand-logo {
+    padding: 6px 14px;
+    gap: 8px;
   }
-  .corner-action-btn {
-    padding: 9px 16px;
-    font-size: 0.82rem;
+  .corner-logo-dot {
+    width: 20px;
+    height: 20px;
+  }
+  .corner-brand-text {
+    display: inline-block;
+    font-size: 0.88rem;
+  }
+  .corner-theme-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
   }
 }
 
@@ -570,6 +582,7 @@ body {
   z-index: 10;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,12 +620,6 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .fan-carousel-stage {
-    height: 330px;
-  }
-}
-
 .fan-layout {
   position: relative;
   display: flex;
@@ -643,15 +650,117 @@ body {
 
 @media (max-width: 768px) {
   .fan-card {
-    width: 12.5rem;
-    height: 19.5rem;
+    width: 12.8rem;
+    height: 19.8rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  .category-section {
+    padding-top: calc(56px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  }
+  .category-section .container {
+    padding: 0 14px;
+    justify-content: space-between;
+  }
+  .page-search-container {
+    margin-bottom: 4px;
+    margin-top: 2px;
+  }
+  .border-beam-search-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 44px;
+  }
+  .border-beam-search-inner {
+    padding: 0 14px;
+    gap: 10px;
+  }
+  .border-beam-search-inner input {
+    font-size: 16px; /* Prevents auto zoom in iOS Safari */
+  }
+  .fan-carousel-stage {
+    height: 330px;
+    margin: 4px 0 8px;
+  }
   .fan-card {
-    width: 10rem;
-    height: 15.5rem;
+    width: 11.6rem;
+    height: 17.2rem;
+  }
+  .fan-card-full-image {
+    padding: 16px 14px;
+    border-radius: 22px;
+  }
+  .fan-card-title-text {
+    font-size: 1.18rem;
+    margin-bottom: 4px;
+  }
+  .fan-card-subtitle-text {
+    font-size: 0.74rem;
+  }
+  .fan-card-pill-tag {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+  }
+  .fan-card-icon-bubble {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  .fan-card-bottom-row {
+    padding-top: 8px;
+  }
+  .fan-card-photo-count {
+    font-size: 0.74rem;
+  }
+  .fan-card-action-btn {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+  .fan-controls-capsule {
+    margin-top: 4px;
+    padding: 4px 14px;
+    gap: 12px;
+  }
+  .fan-arrow-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 380px) {
+  .fan-card {
+    width: 10.4rem;
+    height: 15.8rem;
+  }
+  .fan-card-full-image {
+    padding: 14px 12px;
+    border-radius: 20px;
+  }
+  .fan-card-title-text {
+    font-size: 1.05rem;
+  }
+  .fan-card-subtitle-text {
+    display: none;
+  }
+  .fan-card-action-btn {
+    padding: 4px 9px;
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-height: 620px) {
+  html, body {
+    overflow-y: auto;
+  }
+  .category-section {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: visible;
+    padding-top: calc(56px + env(safe-area-inset-top, 0px));
+    padding-bottom: 24px;
   }
 }
 
@@ -1762,19 +1871,151 @@ body {
 @media (max-width: 768px) {
   .pdf-top-navbar {
     padding: 0 12px;
+    padding-top: env(safe-area-inset-top, 0px);
   }
+  .pdf-nav-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+  .pdf-doc-filename {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+  }
+  .pdf-sub-toolbar {
+    padding: 0 8px;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pdf-viewer-fullscreen-overlay,
+  .pdf-app-window {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .pdf-top-navbar {
+    height: 48px;
+    min-height: 48px;
+    padding: 0 12px;
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .pdf-navbar-left {
+    gap: 8px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .pdf-file-icon {
+    font-size: 1.15rem;
+    flex-shrink: 0;
+  }
+
+  .pdf-doc-filename {
+    font-size: 0.92rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 130px;
+  }
+
+  .pdf-navbar-right {
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
   .pdf-nav-btn {
     width: 32px;
     height: 32px;
     font-size: 0.95rem;
   }
+
   .pdf-sub-toolbar {
-    padding: 0 10px;
-    overflow-x: auto;
+    height: 42px;
+    min-height: 42px;
+    padding: 0 8px;
+    justify-content: space-between;
+    gap: 4px;
+    overflow-x: visible;
   }
-  .pdf-page-body-photo {
-    padding: 6px;
-    min-height: 280px;
+
+  .pdf-toolbar-left {
+    display: none;
+  }
+
+  .pdf-toolbar-center {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    gap: 4px;
+  }
+
+  .pdf-page-selector {
+    padding: 2px 6px;
+    gap: 4px;
+  }
+
+  .pdf-page-selector input {
+    width: 28px;
+    font-size: 0.82rem;
+  }
+
+  .pdf-page-slash,
+  .pdf-page-total {
+    font-size: 0.78rem;
+  }
+
+  .pdf-zoom-controls {
+    padding: 2px 4px;
+    gap: 2px;
+  }
+
+  .pdf-tool-icon-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .pdf-zoom-level {
+    font-size: 0.75rem;
+    min-width: 36px;
+  }
+
+  .pdf-toolbar-divider {
+    height: 16px;
+    margin: 0 2px;
+  }
+
+  #pdfAnnotateBtn,
+  #pdfUndoBtn,
+  #pdfRedoBtn {
+    display: none !important;
+  }
+
+  .pdf-reader-fullscreen-viewport {
+    height: calc(100vh - 90px);
+    height: calc(100dvh - 90px);
+    padding: 4px 0 calc(50px + env(safe-area-inset-bottom, 0px));
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pdf-document-stream {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 4px;
+    gap: 6px;
+  }
+
+  .pdf-document-page {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   }
 }
 

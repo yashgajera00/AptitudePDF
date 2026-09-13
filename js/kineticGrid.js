@@ -104,6 +104,18 @@ class KineticGridEngine {
       this.targetMouse.y = -9999;
     });
 
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches.length > 0) {
+        this.targetMouse.x = e.touches[0].clientX;
+        this.targetMouse.y = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      this.targetMouse.x = -9999;
+      this.targetMouse.y = -9999;
+    }, { passive: true });
+
     window.addEventListener('click', (e) => {
       this.ripples.push({
         x: e.clientX,

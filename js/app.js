@@ -314,12 +314,14 @@ class App {
     const streamEl = document.getElementById('pdfDocumentStream');
     if (displayEl) displayEl.textContent = `${Math.round(zoom * 100)}%`;
     if (streamEl) {
+      const isMobile = window.innerWidth <= 640;
+      const baseVw = isMobile ? 100 : 95;
       if (zoom === 1.0) {
-        streamEl.style.width = '95vw';
-        streamEl.style.maxWidth = '95vw';
+        streamEl.style.width = `${baseVw}vw`;
+        streamEl.style.maxWidth = `${baseVw}vw`;
       } else {
-        streamEl.style.width = `${Math.round(95 * zoom)}vw`;
-        streamEl.style.maxWidth = `${Math.round(95 * zoom)}vw`;
+        streamEl.style.width = `${Math.round(baseVw * zoom)}vw`;
+        streamEl.style.maxWidth = `${Math.round(baseVw * zoom)}vw`;
       }
     }
   }
