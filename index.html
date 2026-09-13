@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude Image Vault & Direct PDF Converter</title>
+  <meta name="description" content="Store, organize, and directly convert and merge images into high-resolution multi-page PDF documents with an administrative upload portal.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Application Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- jsPDF, Canvas Confetti & GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Left Corner: Logo Dot & "Aptitude PDFs" Name -->
+  <div class="corner-brand-wrapper">
+    <a href="#" class="corner-brand-logo" title="Aptitude PDFs">
+      <span class="corner-logo-dot"></span>
+      <span class="corner-brand-text">Aptitude PDFs</span>
+    </a>
+  </div>
+
+  <!-- Top Right Corner: Theme Switcher & Admin Login Buttons -->
+  <div class="corner-actions-wrapper">
+    <!-- Button 1: Theme Toggle Circular Button -->
+    <button class="corner-theme-btn" id="themeToggleBtn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+      <i class="fa-solid fa-moon" id="themeToggleIcon"></i>
+    </button>
+
+    <!-- Admin Active Pill Badge (shown when logged in) -->
+    <div class="admin-badge" id="adminStatusPill" style="display: none; padding: 6px 14px; font-size: 0.8rem;">
+      <i class="fa-solid fa-shield-halved"></i> Admin
+    </div>
+
+    <!-- Button 2: Login with Admin Pill Button -->
+    <button class="corner-action-btn" id="navAdminLoginBtn" onclick="window.app.openModal('adminLoginModal')">
+      <i class="fa-solid fa-user-shield"></i> Login with Admin
+    </button>
+
+    <!-- Button 2: Admin Dashboard Pill Button (when logged in) -->
+    <button class="corner-action-btn" id="navAdminDashboardBtn" style="display: none;" onclick="window.app.openModal('adminDashboardModal')">
+      <i class="fa-solid fa-gear"></i> Admin Portal
+    </button>
+  </div>
+
+  <!-- Full Page Interactive Kinetic Grid Background Canvas -->
+  <div class="global-canvas-background">
+    <canvas id="globalKineticGridCanvas"></canvas>
+  </div>
+
+  <!-- Category & Albums 3D Fan Carousel Section -->
+  <section class="category-section" id="albumsSection">
+    <div class="container">
+      <!-- Floating Border Beam Search Bar on Background -->
+      <div class="page-search-container">
+        <div class="border-beam-search-wrapper">
+          <div class="border-beam-border"></div>
+          <div class="border-beam-search-inner">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="mainSearchInput" placeholder="Search formulas, reasoning & collections...">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Fan Layout Wrapper -->
+      <div class="fan-carousel-stage">
+        <div class="fan-layout" id="fanLayoutContainer">
+          <!-- Rendered dynamically as 3D fan cards -->
+        </div>
+      </div>
+
+      <!-- Carousel Pagination Controls with Glassmorphic Capsule -->
+      <div class="fan-controls-capsule">
+        <button class="fan-arrow-btn" id="fanPrevBtn" aria-label="Previous Option">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="fan-dots" id="fanDotsContainer">
+          <!-- Dots rendered dynamically -->
+        </div>
+        <button class="fan-arrow-btn" id="fanNextBtn" aria-label="Next Option">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Login Modal -->
+  <div class="modal-overlay" id="adminLoginModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-user-shield" style="color: var(--primary);"></i> Admin Authentication</h3>
+        <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="adminLoginForm">
+        <div class="modal-body">
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+            Sign in with administrator credentials to upload photos and directly compile/merge them into PDFs.
+          </p>
+
+          <div class="form-group">
+            <label for="adminUser">Admin Username</label>
+            <input type="text" id="adminUser" class="form-control" placeholder="Enter admin username" required value="admin">
+          </div>
+
+          <div class="form-group">
+            <label for="adminPass">Password</label>
+            <input type="password" id="adminPass" class="form-control" placeholder="Enter admin password" required value="admin123">
+          </div>
+
+          <div style="background: rgba(99, 102, 241, 0.1); border: 1px dashed rgba(99, 102, 241, 0.3); border-radius: var(--radius-md); padding: 12px; margin-top: 16px; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.8rem; color: #a5b4fc;">
+              <i class="fa-solid fa-info-circle"></i> Default Demo: <strong>admin</strong> / <strong>admin123</strong>
+            </span>
+            <button type="button" class="btn btn-secondary btn-sm" id="fillDemoCredsBtn">Fill Demo</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Login as Admin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard & Photo Upload Modal -->
+  <div class="modal-overlay" id="adminDashboardModal">
+    <div class="modal-container large">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-user-shield" style="color: var(--primary);"></i> Admin Portal</h3>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="btn btn-danger btn-sm" id="adminLogoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+          <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Two Clean Options Section -->
+        <div class="admin-two-options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 22px;">
+          
+          <!-- OPTION 1: Dropdown Select Existing Collection -->
+          <div class="admin-option-box" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                <span style="background: var(--primary); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700;">1</span>
+                <h4 style="font-size: 1rem; font-weight: 700; margin: 0;">Select Existing Collection</h4>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 12px;">
+                Choose a collection from database to upload photos or generate PDF.
+              </p>
+
+              <div class="form-group" style="margin-bottom: 12px;">
+                <select id="adminUploadCategory" class="form-control" style="font-weight: 600;" onchange="window.admin && window.admin.handleCategoryChange()">
+                  <!-- Populated dynamically from IndexedDB -->
+                </select>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px;">
+              <button type="button" class="btn btn-primary" style="flex: 1; justify-content: center; font-weight: 700; padding: 10px 18px;" onclick="window.admin.openSelectedCollection()">
+                <i class="fa-solid fa-folder-open"></i> Open
+              </button>
+              <button type="button" class="btn btn-danger btn-sm" onclick="window.admin.handleDeleteCurrentCollection()" title="Delete selected collection">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- OPTION 2: Add New Collection -->
+          <div class="admin-option-box" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                <span style="background: var(--secondary); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700;">2</span>
+                <h4 style="font-size: 1rem; font-weight: 700; margin: 0;">Add New Collection</h4>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 12px;">
+                Create a new topic or album and store it in database.
+              </p>
+
+              <form id="adminAddCollectionForm" onsubmit="event.preventDefault(); window.admin && window.admin.handleAddNewCollection();">
+                <div class="form-group" style="margin-bottom: 12px;">
+                  <input type="text" id="newCollectionNameInput" class="form-control" placeholder="Enter new collection name..." required>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; font-weight: 600;">
+                  <i class="fa-solid fa-plus"></i> Add Collection to Database
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Collection Photos View & Upload Modal -->
+  <div class="modal-overlay" id="collectionPhotosModal">
+    <div class="modal-container large">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="window.admin.backToAdminMenu()" title="Back to Collections Menu">
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+          <h3 id="openedCollectionTitle" style="font-size: 1.15rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-folder-open" style="color: var(--primary);"></i>
+            <span id="openedCollectionName">Collection</span>
+          </h3>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button type="button" class="btn btn-primary btn-sm" onclick="window.admin.convertOpenedCollectionToPDF()">
+            <i class="fa-solid fa-file-pdf"></i> Convert to PDF
+          </button>
+          <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Upload Photos into this Collection -->
+        <div class="dropzone" id="collectionDropzone" style="margin-bottom: 22px; padding: 28px 20px;">
+          <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2.2rem; color: var(--primary); margin-bottom: 8px;"></i>
+          <h4 style="font-size: 1.05rem; margin-bottom: 4px;">Upload Photos into this Collection</h4>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">Click or drag & drop images here (PNG, JPG, JPEG, WebP).</p>
+          <input type="file" id="collectionFileInput" accept="image/*,.png,.jpg,.jpeg,.webp,.gif,.bmp,.jfif,.svg,.avif,.heic" multiple style="display: none;">
+        </div>
+
+        <!-- Particular Photos List in this Collection -->
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);">
+            Photos in Collection (<span id="openedCollectionCount">0</span>)
+          </h4>
+        </div>
+
+        <div class="admin-items-list" id="collectionPhotosGrid">
+          <!-- Populated dynamically with all photos in this specific collection -->
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="window.admin.backToAdminMenu()">Back to Menu</button>
+        <button type="button" class="btn btn-primary" onclick="window.admin.convertOpenedCollectionToPDF()">
+          <i class="fa-solid fa-file-pdf"></i> Generate PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Delete Confirmation Modal -->
+  <div class="modal-overlay" id="deleteConfirmModal" style="z-index: 100050;">
+    <div class="modal-container" style="max-width: 420px; text-align: center; border-radius: var(--radius-xl); overflow: hidden;">
+      <div style="padding: 32px 24px 20px;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(239, 68, 68, 0.12); color: var(--danger); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px; border: 1px solid rgba(239, 68, 68, 0.25);">
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+        <h3 id="deleteModalTitle" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: var(--text-main);">Delete Confirmation</h3>
+        <p id="deleteModalMessage" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 24px;">
+          Are you sure you want to delete this photo from the collection and project folder?
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <button type="button" class="btn btn-secondary" style="flex: 1; justify-content: center; font-weight: 600;" onclick="window.app.closeConfirmationModal()">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteActionBtn" style="flex: 1; justify-content: center; font-weight: 700;">
+            <i class="fa-solid fa-trash"></i> Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Screen PDF Document Viewer Modal (Matching Reference UI) -->
+  <div class="modal-overlay pdf-viewer-fullscreen-overlay" id="pdfViewerModal">
+    <div class="pdf-app-window">
+      
+      <!-- Primary Top Navigation Bar (Dark) -->
+      <div class="pdf-top-navbar">
+        <div class="pdf-navbar-left">
+          <div class="pdf-file-icon"><i class="fa-solid fa-file-pdf"></i></div>
+          <h2 class="pdf-doc-filename" id="pdfDocumentName">Document.pdf</h2>
+        </div>
+        
+        <div class="pdf-navbar-right">
+          <button type="button" class="pdf-nav-btn btn-fullscreen" id="pdfToggleFullscreenBtn" onclick="window.app && window.app.toggleDeviceFullscreen()" title="Toggle Fullscreen">
+            <i class="fa-solid fa-expand"></i>
+          </button>
+          <button type="button" class="pdf-nav-btn btn-free-download" id="pdfDownloadBtn" title="Free Download">
+            <i class="fa-solid fa-download"></i>
+          </button>
+          <button type="button" class="pdf-nav-btn btn-close-red" onclick="window.app.closeModal('pdfViewerModal')" title="Close Reader / Back">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Secondary PDF Control Toolbar -->
+      <div class="pdf-sub-toolbar">
+        <!-- Left: Menu & pdf tag -->
+        <div class="pdf-toolbar-group pdf-toolbar-left">
+          <button class="pdf-tool-icon-btn" id="pdfSidebarToggleBtn" title="Toggle Thumbnails">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <span class="pdf-toolbar-label">pdf</span>
+        </div>
+
+        <!-- Center: Page navigation, Zoom, View modes -->
+        <div class="pdf-toolbar-group pdf-toolbar-center">
+          <!-- Page Number Box -->
+          <div class="pdf-page-selector">
+            <input type="number" id="pdfCurrentPageInput" value="1" min="1" max="1" aria-label="Current Page">
+            <span class="pdf-page-slash">/</span>
+            <span class="pdf-page-total" id="pdfTotalPagesDisplay">1</span>
+          </div>
+
+          <span class="pdf-toolbar-divider"></span>
+
+          <!-- Zoom Controls -->
+          <div class="pdf-zoom-controls">
+            <button class="pdf-tool-icon-btn" id="pdfZoomOutBtn" title="Zoom Out">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <span class="pdf-zoom-level" id="pdfZoomLevelDisplay">100%</span>
+            <button class="pdf-tool-icon-btn" id="pdfZoomInBtn" title="Zoom In">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <span class="pdf-toolbar-divider"></span>
+
+          <!-- Page Layout / Fit Options -->
+          <button class="pdf-tool-icon-btn" id="pdfFitWidthBtn" title="Fit to Width / Page">
+            <i class="fa-regular fa-file"></i>
+          </button>
+          <button class="pdf-tool-icon-btn" id="pdfRotateBtn" title="Rotate Clockwise (90°)">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          <button class="pdf-tool-icon-btn" id="pdfAnnotateBtn" title="Draw & Markup Notes">
+            <i class="fa-solid fa-pen-nib"></i>
+          </button>
+          <button class="pdf-tool-icon-btn" id="pdfUndoBtn" title="Undo Action">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+          <button class="pdf-tool-icon-btn" id="pdfRedoBtn" title="Redo Action">
+            <i class="fa-solid fa-arrow-rotate-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main PDF Document Viewport Area -->
+      <div class="pdf-reader-fullscreen-viewport" id="pdfDocumentStreamContainer">
+        <div class="pdf-document-stream" id="pdfDocumentStream">
+          <!-- All photos rendered dynamically as real PDF pages -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/pdfEngine.js"></script>
+  <script src="js/kineticGrid.js"></script>
+  <script src="js/cardFanCarousel.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
