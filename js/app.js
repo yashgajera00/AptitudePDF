@@ -27,8 +27,7 @@ class App {
       localStorage.setItem('db_cleared_v2', 'true');
     }
 
-    // Check admin authentication UI
-    window.admin.updateAdminUI();
+
 
     // Bind event handlers
     this.bindEvents();
@@ -132,11 +131,7 @@ class App {
     document.querySelectorAll('.modal-overlay').forEach(overlay => {
       overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
-          if (overlay.id === 'deleteConfirmModal') {
-            this.closeConfirmationModal();
-          } else {
-            overlay.classList.remove('active');
-          }
+          overlay.classList.remove('active');
         }
       });
     });
@@ -144,14 +139,9 @@ class App {
     // Keyboard ESC to close modal
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        const activeConfirm = document.getElementById('deleteConfirmModal');
-        if (activeConfirm && activeConfirm.classList.contains('active')) {
-          this.closeConfirmationModal();
-        } else {
-          document.querySelectorAll('.modal-overlay.active').forEach(modal => {
-            modal.classList.remove('active');
-          });
-        }
+        document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+          modal.classList.remove('active');
+        });
       }
     });
 
@@ -418,7 +408,6 @@ class App {
   async refreshUI() {
     this.allImages = await window.appStorage.getAllImages();
     this.updateStatsRibbon();
-    await this.updateCategoryOptionsInAdmin();
     await this.renderAlbumCards();
   }
 
@@ -430,14 +419,6 @@ class App {
     
     const categories = new Set(this.allImages.map(img => img.category));
     if (totalAlbumsEl) totalAlbumsEl.textContent = categories.size;
-  }
-
-  async updateCategoryOptionsInAdmin() {
-    const adminUploadCategory = document.getElementById('adminUploadCategory');
-    if (!adminUploadCategory) return;
-
-    const uniqueCats = await window.appStorage.getAllCollectionsList();
-    adminUploadCategory.innerHTML = uniqueCats.map(cat => `<option value="${cat}">${cat}</option>`).join('');
   }
 
   async renderAlbumCards() {
@@ -547,12 +528,9 @@ class App {
             <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">
               No Photos in "${this.activeViewerCategory || 'Collection'}" Yet
             </h3>
-            <p style="font-size: 0.92rem; color: var(--text-muted); max-width: 440px; margin: 0 auto 24px; line-height: 1.6;">
-              Upload study notes, diagrams, or formula photos into this collection to compile them into a multi-page PDF document.
+            <p style="font-size: 0.92rem; color: var(--text-muted); max-width: 440px; margin: 0 auto 16px; line-height: 1.6;">
+              There are no documents or photos currently in this collection.
             </p>
-            <button class="btn btn-primary" onclick="window.app.handleEmptyCollectionUpload('${(this.activeViewerCategory || '').replace(/'/g, "\\'")}')" style="padding: 12px 28px; font-weight: 700; font-size: 0.95rem; border-radius: 999px;">
-              <i class="fa-solid fa-cloud-arrow-up"></i> Upload Photos to Collection
-            </button>
           </div>
         `;
       } else {
@@ -565,18 +543,6 @@ class App {
     }
 
     this.openModal('pdfViewerModal');
-  }
-
-  handleEmptyCollectionUpload(category) {
-    this.closeModal('pdfViewerModal');
-    if (window.appStorage.isAdminLoggedIn()) {
-      window.admin.currentOpenedCollection = category;
-      this.openModal('collectionPhotosModal');
-      window.admin.loadCollectionPhotos(category);
-    } else {
-      this.showToast('Please login as admin to upload photos', 'info');
-      this.openModal('adminLoginModal');
-    }
   }
 
   changeViewerPage(delta) {
@@ -593,10 +559,6 @@ class App {
     const modal = document.getElementById(modalId);
     if (modal) {
       modal.classList.add('active');
-      if (modalId === 'adminDashboardModal' && window.admin) {
-        window.admin.loadAdminItemsList();
-        window.admin.loadAdminCollectionsDropdown();
-      }
     }
   }
 
@@ -607,58 +569,6 @@ class App {
       if (modalId === 'pdfViewerModal' && document.fullscreenElement) {
         document.exitFullscreen().catch(() => {});
       }
-    }
-  }
-
-  askConfirmation({ title, message, confirmBtnText = 'Delete', onConfirm }) {
-    const titleEl = document.getElementById('deleteModalTitle');
-    const msgEl = document.getElementById('deleteModalMessage');
-    const confirmBtn = document.getElementById('confirmDeleteActionBtn');
-
-    // Find any currently active parent modal (e.g. adminDashboardModal or collectionPhotosModal)
-    const activeModals = Array.from(document.querySelectorAll('.modal-overlay.active'));
-    const previousModal = activeModals.find(m => m.id !== 'deleteConfirmModal');
-    this.pendingConfirmationPreviousModalId = previousModal ? previousModal.id : null;
-
-    // Temporarily hide the parent modal so it is NEVER visible in the backside
-    if (this.pendingConfirmationPreviousModalId) {
-      this.closeModal(this.pendingConfirmationPreviousModalId);
-    }
-
-    if (titleEl) titleEl.textContent = title || 'Delete Confirmation';
-    if (msgEl) msgEl.textContent = message || 'Are you sure you want to delete this item?';
-    
-    if (confirmBtn) {
-      confirmBtn.innerHTML = `<i class="fa-solid fa-trash"></i> ${confirmBtnText}`;
-      // Replace button with fresh clone to remove previous click listeners
-      const newBtn = confirmBtn.cloneNode(true);
-      confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
-
-      newBtn.addEventListener('click', async () => {
-        const prevModalId = this.pendingConfirmationPreviousModalId;
-        this.pendingConfirmationPreviousModalId = null;
-        this.closeModal('deleteConfirmModal');
-
-        if (typeof onConfirm === 'function') {
-          await onConfirm();
-        }
-
-        // Seamlessly restore parent modal with fresh data
-        if (prevModalId) {
-          this.openModal(prevModalId);
-        }
-      });
-    }
-
-    this.openModal('deleteConfirmModal');
-  }
-
-  closeConfirmationModal() {
-    const prevModalId = this.pendingConfirmationPreviousModalId;
-    this.pendingConfirmationPreviousModalId = null;
-    this.closeModal('deleteConfirmModal');
-    if (prevModalId) {
-      this.openModal(prevModalId);
     }
   }
 

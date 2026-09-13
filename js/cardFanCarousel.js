@@ -136,11 +136,8 @@ class CardFanCarousel {
           <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 14px;">
             <i class="fa-solid fa-folder-open"></i>
           </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: var(--text-main);">Database is Empty</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5;">Click "Login with Admin" in the top-right corner to add your custom collections and upload study notes.</p>
-          <button class="pill-action-btn" onclick="window.app.openModal('adminLoginModal')" style="font-size: 0.88rem; padding: 10px 22px;">
-            <i class="fa-solid fa-user-shield"></i> Open Admin Portal
-          </button>
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: var(--text-main);">No Collections Available</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">Add folders inside the uploads directory to browse study materials and download PDFs.</p>
         </div>
       `;
       const dotsContainer = document.getElementById('fanDotsContainer');

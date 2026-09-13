@@ -4,9 +4,235 @@
       "id": "col-437842789821452317",
       "name": "Simple Interest",
       "createdAt": 1789316182774
+    },
+    "Basic Mathemetics": {
+      "id": "col-155502796772403446",
+      "name": "Basic Mathemetics",
+      "createdAt": 1789321765289
+    },
+    "Percentage": {
+      "id": "col-7100869839134868445",
+      "name": "Percentage",
+      "createdAt": 1789321709854
     }
   },
   "images": [
+    {
+      "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.13.57 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.13.57 Pm",
+      "category": "Basic Mathemetics",
+      "filename": "WhatsApp Image 2026-09-13 at 3.13.57 PM.jpeg",
+      "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.13.57%20PM.jpeg",
+      "createdAt": 1789296900580,
+      "orderIndex": 1
+    },
+    {
+      "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.13.58 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.13.58 Pm",
+      "category": "Basic Mathemetics",
+      "filename": "WhatsApp Image 2026-09-13 at 3.13.58 PM.jpeg",
+      "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.13.58%20PM.jpeg",
+      "createdAt": 1789296900584,
+      "orderIndex": 2
+    },
+    {
+      "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.13.58 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.13.58 Pm (1)",
+      "category": "Basic Mathemetics",
+      "filename": "WhatsApp Image 2026-09-13 at 3.13.58 PM (1).jpeg",
+      "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.13.58%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900587,
+      "orderIndex": 3
+    },
+    {
+      "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.13.59 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.13.59 Pm",
+      "category": "Basic Mathemetics",
+      "filename": "WhatsApp Image 2026-09-13 at 3.13.59 PM.jpeg",
+      "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.13.59%20PM.jpeg",
+      "createdAt": 1789296900594,
+      "orderIndex": 4
+    },
+    {
+      "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.14.00 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.00 Pm",
+      "category": "Basic Mathemetics",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.00 PM.jpeg",
+      "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.14.00%20PM.jpeg",
+      "createdAt": 1789296900599,
+      "orderIndex": 5
+    },
+    {
+      "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.14.01 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.01 Pm",
+      "category": "Basic Mathemetics",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.01 PM.jpeg",
+      "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.14.01%20PM.jpeg",
+      "createdAt": 1789296900602,
+      "orderIndex": 6
+    },
+    {
+      "id": "Basic Mathemetics-WhatsApp Image 2026-09-13 at 3.14.01 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.01 Pm (1)",
+      "category": "Basic Mathemetics",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.01 PM (1).jpeg",
+      "dataUrl": "/uploads/Basic%20Mathemetics/WhatsApp%20Image%202026-09-13%20at%203.14.01%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900606,
+      "orderIndex": 7
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.03 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.03 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.03 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.03%20PM.jpeg",
+      "createdAt": 1789296900609,
+      "orderIndex": 1
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.03 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.03 Pm (1)",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.03 PM (1).jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.03%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900614,
+      "orderIndex": 2
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.07 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.07 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.07 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.07%20PM.jpeg",
+      "createdAt": 1789296900622,
+      "orderIndex": 3
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.07 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.07 Pm (1)",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.07 PM (1).jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.07%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900626,
+      "orderIndex": 4
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.09 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.09 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.09 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.09%20PM.jpeg",
+      "createdAt": 1789296900629,
+      "orderIndex": 5
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.10 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.10 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.10 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.10%20PM.jpeg",
+      "createdAt": 1789296900634,
+      "orderIndex": 6
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.10 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.10 Pm (1)",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.10 PM (1).jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.10%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900643,
+      "orderIndex": 7
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.10 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.10 Pm (2)",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.10 PM (2).jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.10%20PM%20%282%29.jpeg",
+      "createdAt": 1789296900648,
+      "orderIndex": 8
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.11 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.11 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.11 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.11%20PM.jpeg",
+      "createdAt": 1789296900653,
+      "orderIndex": 9
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.12 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.12 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.12 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.12%20PM.jpeg",
+      "createdAt": 1789296900665,
+      "orderIndex": 10
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.12 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.12 Pm (1)",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.12 PM (1).jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.12%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900669,
+      "orderIndex": 11
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.13 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.13 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.13 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.13%20PM.jpeg",
+      "createdAt": 1789296900673,
+      "orderIndex": 12
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.15 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.15 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.15 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.15%20PM.jpeg",
+      "createdAt": 1789296900681,
+      "orderIndex": 13
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.15 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.15 Pm (1)",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.15 PM (1).jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.15%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900689,
+      "orderIndex": 14
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.18 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.18 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.18 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.18%20PM.jpeg",
+      "createdAt": 1789296900698,
+      "orderIndex": 15
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.19 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.19 Pm",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.19 PM.jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.19%20PM.jpeg",
+      "createdAt": 1789296900707,
+      "orderIndex": 16
+    },
+    {
+      "id": "Percentage-WhatsApp Image 2026-09-13 at 3.14.19 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.19 Pm (1)",
+      "category": "Percentage",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.19 PM (1).jpeg",
+      "dataUrl": "/uploads/Percentage/WhatsApp%20Image%202026-09-13%20at%203.14.19%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900715,
+      "orderIndex": 17
+    },
     {
       "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.21 PM.jpeg",
       "title": "Whatsapp Image 2026 09 13 At 3.14.21 Pm",
