@@ -6,6 +6,9 @@
 class App {
   constructor() {
     this.allImages = [];
+    this.allCollectionCardsData = [];
+    this.currentViewMode = localStorage.getItem('preferred_view_mode') || 'card';
+    this.currentListSort = 'default';
     
     // PDF Viewer State
     this.activeViewerImages = [];
@@ -31,6 +34,9 @@ class App {
 
     // Bind event handlers
     this.bindEvents();
+
+    // Set initial view mode
+    this.setViewMode(this.currentViewMode);
 
     // Render initial view
     await this.refreshUI();
@@ -88,11 +94,43 @@ class App {
       themeToggleBtn.addEventListener('click', () => this.toggleTheme());
     }
 
+    // View pattern switcher triggers
+    const viewModeToggleBtn = document.getElementById('viewModeToggleBtn');
+    if (viewModeToggleBtn) {
+      viewModeToggleBtn.addEventListener('click', () => this.toggleViewMode());
+    }
+
+    const viewCardBtn = document.getElementById('viewCardBtn');
+    if (viewCardBtn) {
+      viewCardBtn.addEventListener('click', () => this.setViewMode('card'));
+    }
+
+    const viewListBtn = document.getElementById('viewListBtn');
+    if (viewListBtn) {
+      viewListBtn.addEventListener('click', () => this.setViewMode('list'));
+    }
+
+    const listSortSelect = document.getElementById('listSortSelect');
+    if (listSortSelect) {
+      listSortSelect.addEventListener('change', (e) => {
+        this.currentListSort = e.target.value;
+        this.renderCollectionsList();
+      });
+    }
+
     // Floating Background Border Beam Search Input
     const searchInput = document.getElementById('mainSearchInput');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
+
+        // In list mode: filter list cards in real-time
+        if (this.currentViewMode === 'list') {
+          this.filterCollectionsList(query);
+          return;
+        }
+
+        // In card mode: jump to matching card in 3D fan carousel
         if (!query || !this.fanCarousel) return;
 
         const foundIndex = this.fanCarousel.cards.findIndex(c => 
@@ -106,8 +144,9 @@ class App {
       searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
           const query = searchInput.value.toLowerCase().trim();
-          if (!query || !this.fanCarousel) return;
-          const found = this.fanCarousel.cards.find(c => 
+          if (!query) return;
+
+          const found = this.allCollectionCardsData.find(c => 
             c.category.toLowerCase().includes(query)
           );
           if (found) {
@@ -438,6 +477,8 @@ class App {
       };
     });
 
+    this.allCollectionCardsData = cardsData;
+
     if (!this.fanCarousel && window.CardFanCarousel) {
       this.fanCarousel = new window.CardFanCarousel('fanLayoutContainer', {
         maxVisible: 7,
@@ -456,6 +497,212 @@ class App {
     if (this.fanCarousel) {
       window.cardFanCarousel = this.fanCarousel;
       this.fanCarousel.setCards(cardsData);
+    }
+
+    // Also populate the list pattern view
+    this.renderCollectionsList();
+  }
+
+  // View Mode Switching (3D Cards vs List Pattern)
+  setViewMode(mode) {
+    this.currentViewMode = mode;
+    localStorage.setItem('preferred_view_mode', mode);
+
+    const fanStage = document.getElementById('fanCarouselStage');
+    const fanControls = document.getElementById('fanControlsCapsule');
+    const listView = document.getElementById('collectionsListView');
+    const viewCardBtn = document.getElementById('viewCardBtn');
+    const viewListBtn = document.getElementById('viewListBtn');
+    const cornerBtn = document.getElementById('viewModeToggleBtn');
+    const cornerIcon = document.getElementById('viewModeIcon');
+    const section = document.getElementById('albumsSection');
+
+    if (mode === 'list') {
+      if (fanStage) fanStage.style.display = 'none';
+      if (fanControls) fanControls.style.display = 'none';
+      if (listView) listView.style.display = 'block';
+      if (section) section.classList.add('list-view-active');
+      document.body.classList.add('list-mode-enabled');
+      document.documentElement.classList.add('list-mode-enabled');
+
+      if (viewCardBtn) viewCardBtn.classList.remove('active');
+      if (viewListBtn) viewListBtn.classList.add('active');
+
+      if (cornerBtn) cornerBtn.title = 'Switch to 3D Cards';
+      if (cornerIcon) cornerIcon.className = 'fa-solid fa-layer-group';
+
+      this.renderCollectionsList();
+    } else {
+      if (fanStage) fanStage.style.display = 'flex';
+      if (fanControls) fanControls.style.display = 'inline-flex';
+      if (listView) listView.style.display = 'none';
+      if (section) section.classList.remove('list-view-active');
+      document.body.classList.remove('list-mode-enabled');
+      document.documentElement.classList.remove('list-mode-enabled');
+
+      if (viewCardBtn) viewCardBtn.classList.add('active');
+      if (viewListBtn) viewListBtn.classList.remove('active');
+
+      if (cornerBtn) cornerBtn.title = 'Switch to List Pattern';
+      if (cornerIcon) cornerIcon.className = 'fa-solid fa-list-ul';
+
+      if (this.fanCarousel) {
+        this.fanCarousel.updateLayout();
+      }
+    }
+  }
+
+  toggleViewMode() {
+    const next = this.currentViewMode === 'card' ? 'list' : 'card';
+    this.setViewMode(next);
+    this.showToast(next === 'list' ? 'Switched to List Pattern' : 'Switched to 3D Cards', 'info');
+  }
+
+  getCollectionIcon(categoryName) {
+    const lower = (categoryName || '').toLowerCase().trim();
+    if (lower.includes('percent')) return 'fa-solid fa-percent';
+    if (lower.includes('basic') || lower.includes('mathem')) return 'fa-solid fa-calculator';
+    if (lower.includes('compound')) return 'fa-solid fa-chart-line';
+    if (lower.includes('interest')) return 'fa-solid fa-coins';
+    if (lower.includes('profit') || lower.includes('loss')) return 'fa-solid fa-chart-pie';
+    if (lower.includes('average')) return 'fa-solid fa-scale-balanced';
+    if (lower.includes('age')) return 'fa-solid fa-user-clock';
+    if (lower.includes('ratio') || lower.includes('proportion')) return 'fa-solid fa-arrows-split-up-and-left';
+    if (lower.includes('partner')) return 'fa-solid fa-handshake';
+    if (lower.includes('time') || lower.includes('work')) return 'fa-solid fa-stopwatch';
+    if (lower.includes('speed') || lower.includes('distance')) return 'fa-solid fa-gauge-high';
+    return 'fa-solid fa-book-bookmark';
+  }
+
+  renderCollectionsList() {
+    const listGrid = document.getElementById('collectionsListGrid');
+    const emptyState = document.getElementById('listEmptyState');
+    const countDisplay = document.getElementById('listTotalCountDisplay');
+    if (!listGrid) return;
+
+    let items = [...(this.allCollectionCardsData || [])];
+    
+    // Sort
+    if (this.currentListSort === 'name-asc') {
+      items.sort((a, b) => a.category.localeCompare(b.category));
+    } else if (this.currentListSort === 'name-desc') {
+      items.sort((a, b) => b.category.localeCompare(a.category));
+    } else if (this.currentListSort === 'photos-desc') {
+      items.sort((a, b) => b.count - a.count);
+    }
+
+    if (countDisplay) {
+      countDisplay.textContent = `${items.length} ${items.length === 1 ? 'Topic' : 'Topics'} Available`;
+    }
+
+    if (!items.length) {
+      listGrid.innerHTML = '';
+      if (emptyState) emptyState.style.display = 'block';
+      return;
+    }
+
+    if (emptyState) emptyState.style.display = 'none';
+    this.renderCardsIntoGrid(items);
+  }
+
+  filterCollectionsList(query = '') {
+    const listGrid = document.getElementById('collectionsListGrid');
+    const emptyState = document.getElementById('listEmptyState');
+    const countDisplay = document.getElementById('listTotalCountDisplay');
+    if (!listGrid) return;
+
+    let items = [...(this.allCollectionCardsData || [])];
+    if (query) {
+      items = items.filter(c => c.category.toLowerCase().includes(query));
+    }
+
+    if (countDisplay) {
+      countDisplay.textContent = `${items.length} ${items.length === 1 ? 'Topic' : 'Topics'} Found`;
+    }
+
+    if (!items.length) {
+      listGrid.innerHTML = '';
+      if (emptyState) emptyState.style.display = 'block';
+      return;
+    }
+
+    if (emptyState) emptyState.style.display = 'none';
+    this.renderCardsIntoGrid(items);
+  }
+
+  renderCardsIntoGrid(items) {
+    const listGrid = document.getElementById('collectionsListGrid');
+    if (!listGrid) return;
+
+    listGrid.innerHTML = items.map(card => {
+      const iconClass = this.getCollectionIcon(card.category);
+      const safeCategory = (card.category || '').replace(/'/g, "\\'");
+      return `
+        <div class="list-pattern-card" onclick="window.app.openAlbumAsPDF('${safeCategory}')">
+          <div class="list-card-left">
+            <div class="list-card-icon-bubble">
+              <i class="${iconClass}"></i>
+            </div>
+            ${card.coverImg ? `
+              <div class="list-card-thumb">
+                <img src="${card.coverImg}" alt="${card.category}" loading="lazy">
+              </div>
+            ` : ''}
+            <div class="list-card-info">
+              <h3 class="list-card-title">${card.category}</h3>
+              <div class="list-card-meta">
+                <span class="list-meta-pill count-pill">
+                  <i class="fa-solid fa-layer-group"></i> ${card.count} ${card.count === 1 ? 'Photo' : 'Photos'}
+                </span>
+                <span class="list-meta-pill status-pill">
+                  <i class="fa-solid fa-circle-check"></i> PDF Ready
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="list-card-actions" onclick="event.stopPropagation()">
+            <button class="list-btn list-btn-open" onclick="window.app.openAlbumAsPDF('${safeCategory}')" title="Read in Full-Screen PDF Viewer">
+              <i class="fa-solid fa-file-pdf"></i> <span>Open PDF</span>
+            </button>
+            <button class="list-btn list-btn-download" onclick="window.app.quickDownloadAlbum('${safeCategory}', event)" title="Direct Download PDF">
+              <i class="fa-solid fa-download"></i>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  async quickDownloadAlbum(category, e) {
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+    this.allImages = await window.appStorage.getAllImages();
+    const catImages = this.allImages.filter(img => img.category === category);
+    if (!catImages.length) {
+      this.showToast(`No notes found in "${category}"`, 'warning');
+      return;
+    }
+    this.showToast(`Compiling ${catImages.length} pages for ${category}.pdf...`, 'info');
+    try {
+      await window.pdfEngine.generatePDF(catImages, {
+        orientation: 'auto',
+        layout: '1-per-page',
+        margin: 0,
+        addPageNumbers: false,
+        addTitleHeader: false,
+        pdfTitle: category
+      });
+      window.pdfEngine.downloadCurrentPDF(`${category}.pdf`);
+      this.showToast(`${category}.pdf downloaded successfully!`, 'success');
+      if (typeof confetti === 'function') {
+        confetti({ particleCount: 70, spread: 60, origin: { y: 0.8 } });
+      }
+    } catch (err) {
+      console.error('Quick download failed:', err);
+      this.showToast('Failed to download PDF', 'error');
     }
   }
 

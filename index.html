@@ -32,8 +32,11 @@
     </a>
   </div>
 
-  <!-- Top Right Corner: Theme Switcher -->
+  <!-- Top Right Corner: View Pattern & Theme Switcher -->
   <div class="corner-actions-wrapper">
+    <button class="corner-theme-btn" id="viewModeToggleBtn" title="Switch to List Pattern" aria-label="Toggle View Mode">
+      <i class="fa-solid fa-list-ul" id="viewModeIcon"></i>
+    </button>
     <button class="corner-theme-btn" id="themeToggleBtn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
       <i class="fa-solid fa-moon" id="themeToggleIcon"></i>
     </button>
@@ -56,17 +59,29 @@
             <input type="text" id="mainSearchInput" placeholder="Search formulas, reasoning & collections...">
           </div>
         </div>
+
+        <!-- Segmented View Mode Switcher Capsule -->
+        <div class="view-pattern-pill" id="viewPatternPill">
+          <button class="pattern-switch-btn active" id="viewCardBtn" data-mode="card" title="3D Card Fan">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Cards</span>
+          </button>
+          <button class="pattern-switch-btn" id="viewListBtn" data-mode="list" title="List Pattern">
+            <i class="fa-solid fa-list-ul"></i>
+            <span>List</span>
+          </button>
+        </div>
       </div>
 
       <!-- 3D Fan Layout Wrapper -->
-      <div class="fan-carousel-stage">
+      <div class="fan-carousel-stage" id="fanCarouselStage">
         <div class="fan-layout" id="fanLayoutContainer">
           <!-- Rendered dynamically as 3D fan cards -->
         </div>
       </div>
 
       <!-- Carousel Pagination Controls with Glassmorphic Capsule -->
-      <div class="fan-controls-capsule">
+      <div class="fan-controls-capsule" id="fanControlsCapsule">
         <button class="fan-arrow-btn" id="fanPrevBtn" aria-label="Previous Option">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -76,6 +91,35 @@
         <button class="fan-arrow-btn" id="fanNextBtn" aria-label="Next Option">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
+      </div>
+
+      <!-- List Pattern View (Grid / Rows of All Collections) -->
+      <div class="collections-list-view" id="collectionsListView" style="display: none;">
+        <div class="list-pattern-header">
+          <div class="list-pattern-stats">
+            <span class="list-pattern-badge"><i class="fa-solid fa-layer-group"></i> All Collections</span>
+            <span class="list-pattern-count" id="listTotalCountDisplay">9 Topics Available</span>
+          </div>
+          <div class="list-pattern-quick-actions">
+            <span class="list-sort-label">Sort:</span>
+            <select id="listSortSelect" class="list-sort-dropdown" aria-label="Sort Collections">
+              <option value="default">Default Order</option>
+              <option value="name-asc">Name (A - Z)</option>
+              <option value="name-desc">Name (Z - A)</option>
+              <option value="photos-desc">Most Photos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="collections-list-grid" id="collectionsListGrid">
+          <!-- Rendered dynamically as responsive list items -->
+        </div>
+
+        <div class="list-empty-state" id="listEmptyState" style="display: none;">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h4>No collections found</h4>
+          <p>Try searching with another keyword.</p>
+        </div>
       </div>
     </div>
   </section>
