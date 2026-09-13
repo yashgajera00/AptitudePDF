@@ -1,4 +1,119 @@
 {
-  "collections": {},
-  "images": []
+  "collections": {
+    "Simple Interest": {
+      "id": "col-437842789821452317",
+      "name": "Simple Interest",
+      "createdAt": 1789316182774
+    }
+  },
+  "images": [
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.21 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.21 Pm",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.21 PM.jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.21%20PM.jpeg",
+      "createdAt": 1789296900720,
+      "orderIndex": 1
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.21 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.21 Pm (1)",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.21 PM (1).jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.21%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900725,
+      "orderIndex": 2
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.22 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.22 Pm",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.22 PM.jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.22%20PM.jpeg",
+      "createdAt": 1789296900732,
+      "orderIndex": 3
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.23 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.23 Pm",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.23 PM.jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.23%20PM.jpeg",
+      "createdAt": 1789296900740,
+      "orderIndex": 4
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.23 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.23 Pm (1)",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.23 PM (1).jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.23%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900759,
+      "orderIndex": 5
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.24 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.24 Pm",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.24 PM.jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.24%20PM.jpeg",
+      "createdAt": 1789296900765,
+      "orderIndex": 6
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.24 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.24 Pm (1)",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.24 PM (1).jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.24%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900773,
+      "orderIndex": 7
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.24 PM (2).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.24 Pm (2)",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.24 PM (2).jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.24%20PM%20%282%29.jpeg",
+      "createdAt": 1789296900783,
+      "orderIndex": 8
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.25 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.25 Pm",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.25 PM.jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.25%20PM.jpeg",
+      "createdAt": 1789296900792,
+      "orderIndex": 9
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.25 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.25 Pm (1)",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.25 PM (1).jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.25%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900803,
+      "orderIndex": 10
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.26 PM.jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.26 Pm",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.26 PM.jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.26%20PM.jpeg",
+      "createdAt": 1789296900811,
+      "orderIndex": 11
+    },
+    {
+      "id": "Simple Interest-WhatsApp Image 2026-09-13 at 3.14.26 PM (1).jpeg",
+      "title": "Whatsapp Image 2026 09 13 At 3.14.26 Pm (1)",
+      "category": "Simple Interest",
+      "filename": "WhatsApp Image 2026-09-13 at 3.14.26 PM (1).jpeg",
+      "dataUrl": "/uploads/Simple%20Interest/WhatsApp%20Image%202026-09-13%20at%203.14.26%20PM%20%281%29.jpeg",
+      "createdAt": 1789296900820,
+      "orderIndex": 12
+    }
+  ]
 }
