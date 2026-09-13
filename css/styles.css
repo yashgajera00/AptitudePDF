@@ -401,62 +401,6 @@ body {
   opacity: 0.85;
 }
 
-/* ==========================================================================
-   VIEW SWITCHER PILL (3D CARDS VS LIST PATTERN)
-   ========================================================================== */
-.view-pattern-pill {
-  display: inline-flex;
-  align-items: center;
-  background: var(--bg-card);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border-color);
-  border-radius: 999px;
-  padding: 3px;
-  gap: 3px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  z-index: 25;
-  flex-shrink: 0;
-}
-
-[data-theme="dark"] .view-pattern-pill {
-  background: rgba(17, 24, 39, 0.85);
-  border-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-}
-
-.pattern-switch-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: none;
-  background: transparent;
-  color: var(--text-muted);
-  font-family: var(--font-family);
-  font-size: 0.86rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  white-space: nowrap;
-}
-
-.pattern-switch-btn:hover {
-  color: var(--text-main);
-}
-
-.pattern-switch-btn.active {
-  background: var(--primary);
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
-}
-
-[data-theme="dark"] .pattern-switch-btn.active {
-  background: var(--primary);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.45);
-}
 
 .logo-icon {
   width: 42px;

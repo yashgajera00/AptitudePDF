@@ -100,15 +100,6 @@ class App {
       viewModeToggleBtn.addEventListener('click', () => this.toggleViewMode());
     }
 
-    const viewCardBtn = document.getElementById('viewCardBtn');
-    if (viewCardBtn) {
-      viewCardBtn.addEventListener('click', () => this.setViewMode('card'));
-    }
-
-    const viewListBtn = document.getElementById('viewListBtn');
-    if (viewListBtn) {
-      viewListBtn.addEventListener('click', () => this.setViewMode('list'));
-    }
 
     const listSortSelect = document.getElementById('listSortSelect');
     if (listSortSelect) {
@@ -511,8 +502,6 @@ class App {
     const fanStage = document.getElementById('fanCarouselStage');
     const fanControls = document.getElementById('fanControlsCapsule');
     const listView = document.getElementById('collectionsListView');
-    const viewCardBtn = document.getElementById('viewCardBtn');
-    const viewListBtn = document.getElementById('viewListBtn');
     const cornerBtn = document.getElementById('viewModeToggleBtn');
     const cornerIcon = document.getElementById('viewModeIcon');
     const section = document.getElementById('albumsSection');
@@ -525,9 +514,6 @@ class App {
       document.body.classList.add('list-mode-enabled');
       document.documentElement.classList.add('list-mode-enabled');
 
-      if (viewCardBtn) viewCardBtn.classList.remove('active');
-      if (viewListBtn) viewListBtn.classList.add('active');
-
       if (cornerBtn) cornerBtn.title = 'Switch to 3D Cards';
       if (cornerIcon) cornerIcon.className = 'fa-solid fa-layer-group';
 
@@ -539,9 +525,6 @@ class App {
       if (section) section.classList.remove('list-view-active');
       document.body.classList.remove('list-mode-enabled');
       document.documentElement.classList.remove('list-mode-enabled');
-
-      if (viewCardBtn) viewCardBtn.classList.add('active');
-      if (viewListBtn) viewListBtn.classList.remove('active');
 
       if (cornerBtn) cornerBtn.title = 'Switch to List Pattern';
       if (cornerIcon) cornerIcon.className = 'fa-solid fa-list-ul';
